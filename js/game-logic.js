@@ -14,10 +14,10 @@ var playerTwoMoveTwoValue = undefined;
 var playerTwoMoveThreeValue = undefined;
 
 const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue) => {
-	console.log("Setting player moves");
-	console.log("this is moveTwoType " + moveTwoType);
-	console.log("this is moveOneType" + moveOneType);
-	console.log("this is moveThreeType " + moveThreeType);
+	//console.log("Setting player moves");
+	//console.log("this is moveTwoType " + moveTwoType);
+	//console.log("this is moveOneType" + moveOneType);
+	//console.log("this is moveThreeType " + moveThreeType);
 
 	if (!moveOneType || !moveTwoType || !moveThreeType) {
 		
@@ -62,22 +62,13 @@ const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoV
 
 }
 
-console.log('This is player 2 ' + playerTwoMoveOneType);
+//console.log('This is player 2 ' + playerTwoMoveOneType);
 
 }
 
 const getRoundWinner = (roundNumber) => {
-	
-	console.log('this is player 2 getround ' + playerTwoMoveOneType);
 
-	console.log("round winner " + roundNumber + ' ' + playerOneMoveOneType );
-
-
-	if (roundNumber != 1 || 2 || 3 ) {
-		return null;
-	}
-
-	 if (playerOneMoveOneType === 'rock') {
+	if (playerOneMoveOneType === 'rock') {
 	 	console.log("testing");
     	if (playerTwoMoveOneType === 'scissors') {
       return 'Player One';
@@ -85,6 +76,24 @@ const getRoundWinner = (roundNumber) => {
       return 'Player Two';
     }
   }
+	
+	console.log('this is player 1 getround ' + playerOneMoveOneType);
+
+	//console.log("round winner " + roundNumber + ' ' + playerOneMoveOneType );
+
+
+	if (roundNumber != 1 || 2 || 3 ) {
+		return null;
+	}
+
+	 // if (playerOneMoveOneType === 'rock') {
+	 // 	console.log("testing");
+  //   	if (playerTwoMoveOneType === 'scissors') {
+  //     return 'Player One';
+  //   } else {
+  //     return 'Player Two';
+  //   }
+  // }
 	}
 
 const getGameWinner = () => {
